@@ -20,7 +20,7 @@ class Question < ActiveRecord::Base
     order(:total_answers => :desc).limit(limit)
   }
 
-scope :recent, lambda{ |limit = 15|
+  scope :recent, lambda{ |limit = 15|
     order(:created_at => :desc).limit(limit)
   }
 
